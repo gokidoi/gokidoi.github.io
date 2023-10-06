@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/*Parte do codigo onde trabalhei no navbar lateral*/
+ 
+  .container {
+    display: flex;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+    background-color: gray;
+    width: 20vw;
+    height: 1200px;
+  }
+  
+ /*Parte dos Botões do navbar lateral*/
+
+  .side {
+    background-color: rgb(255, 71, 71);
+    border: 5px solid white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+    opacity: 1;
+  }
+  
+  .side:hover {
+    background-color: red;
+  }
+  
+  .side:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+    background-color: rgb(107, 0, 0);
+    border: 5px solid black;
+  }
+
+/*Parte onde trabalhei no navbar superior*/
+
+  .header {
+    background-color: red;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .header .button {
+    padding: 10px 5px;
+    
+  }
+
+/*Parte dos Botões do navbar superior*/
+
+  .top {
+    background-color: white;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 3px 7px 5px;
+    transition: transform 400ms, box-shadow 400ms;
+    opacity: 1;
+  }
+  
+  .top:hover {
+    background-color: rgb(167, 167, 167);
+  }
+  
+  .top:active {
+    box-shadow: 2px 3px 1px;
+    transform: translate(4px, 6px);
+    background-color: black;
+    color: white;
+  }
+  
+/*Parte do dropdown*/
+  
+  .header .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .header .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    min-width: 100px;
+    z-index: 1;
+  }
+  
+  .header .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .header .dropdown:active .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+  }
+  
+/*Parte do conteúdo do site*/
+  
+  .content {
+    background-color: rgb(255, 255, 255);
+    width: 80vw;
+    height: 1200px;
+  }
+
+/*Parte do componente loading*/
+  
+  .loader {
+    width: 50px;
+    height: 50px;
+    border: 10px solid white;
+    border-bottom-color: red;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s reverse infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
